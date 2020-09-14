@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Favorite Movies</title>
+    <title>Notas de clase</title>
     <link rel="stylesheet" href="assets/styles/app.css" />
     <script src="assets/scripts/app.js" defer></script>
   </head>
@@ -12,11 +12,11 @@
     <div id="backdrop"></div>
     <div class="modal" id="add-modal">
       <div class="modal__content">
-        <label for="title">Movie Title</label>
+        <label for="title">Estudiante</label>
         <input type="text" name="title" id="title" />
-        <label for="image-url">Image URL</label>
+        <label for="image-url">Examen</label>
         <input type="text" name="image-url" id="image-url" />
-        <label for="rating">Your Rating</label>
+        <label for="rating">Nota</label>
         <input
           type="number"
           step="1"
@@ -32,27 +32,26 @@
       </div>
     </div>
     <div class="modal" id="delete-modal">
-      <h2 class="modal__title">Are you sure?</h2>
+      <h2 class="modal__title">Seguro desea eliminar?</h2>
       <p class="modal__content">
-        Are you sure you want to delete this item? This action can't be made
-        undone!
+        Esta completamente seguro? No se puede restaurar mejor!
       </p>
       <div class="modal__actions">
         <button class="btn btn--passive">No (Cancel)</button>
-        <button class="btn btn--danger">Yes</button>
+        <button class="btn btn--danger">Si</button>
       </div>
     </div>
 
     <header>
-      <h1>Favorite Movies</h1>
-      <button>ADD MOVIE</button>
+      <h1>Notas Alumnos Bootcamp</h1>
+      <button>Agregar Alumno</button>
     </header>
 
     <main>
       <section id="entry-text" class="card">
-        <p>Your personal movie database!</p>
+        <p>Notas de clase del bootcamp!</p>
       </section>
-      <ul id="movie-list"></ul>
+      <ul id="alumnos-list"></ul>
     </main>
   </body>
 </html>
