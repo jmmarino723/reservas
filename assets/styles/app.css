@@ -170,19 +170,19 @@ input:focus {
   border-radius: 15px;
 }
 
-.movie-element__image {
+.student-element__image {
   flex: 1;
   border-radius: 10px 0 0 10px;
   overflow: hidden;
 }
 
-.movie-element__image img {
+.student-element__image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.movie-element__info {
+.student-element__info {
   flex: 2;
   padding: 1rem;
 }
@@ -205,7 +205,7 @@ input:focus {
   text-align: center;
 }
 
-#movie-list {
+#student-list {
   list-style: none;
   width: 40rem;
   max-width: 90%;

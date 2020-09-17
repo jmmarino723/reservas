@@ -37,15 +37,15 @@ const renderNuevoEstudiante = (title, imageUrl, rating) => {
   const nuevoEstudiante = document.createElement('li');
   nuevoEstudiante.className = 'movie-element';
   nuevoEstudiante.innerHTML = `
-    <div class="movie-element__image">
+    <div class="student-element__image">
       <img src="${imageUrl}" alt="${title}">
     </div>
-    <div class="movie-element__info">
+    <div class="student-element__info">
       <h2>${title}</h2>
-      <p>${rating}/5 stars</p>
+      <p>Calificación ${rating}/5</p>
     </div>
   `;
-  const listRoot = document.getElementById('movie-list');
+  const listRoot = document.getElementById('student-list');
   listRoot.append(nuevoEstudiante);
 };
 
