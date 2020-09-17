@@ -13,9 +13,9 @@
     <div class="modal" id="add-modal">
       <div class="modal__content">
         <label for="title">Estudiante</label>
-        <input type="text" name="title" id="title" />
+        <input type="text" name="title" id="title" pattern="[A-Za-z]{1,15}">
         <label for="image-url">Examen</label>
-        <input type="text" name="image-url" id="image-url" />
+        <input type="text" name="image-url" id="image-url" pattern="[A-Za-z]{1,15}">
         <label for="rating">Nota</label>
         <input
           type="number"
@@ -27,7 +27,7 @@
         />
       </div>
       <div class="modal__actions">
-        <button class="btn btn--passive">Cancel</button>
+        <button class="btn btn--passive" id="cancelBtn">Cancel</button>
         <button class="btn btn--success">Add</button>
       </div>
     </div>
@@ -44,7 +44,7 @@
 
     <header>
       <h1>Notas Alumnos Bootcamp</h1>
-      <button>Agregar Alumno</button>
+      <button id="addStudent">Agregar Alumno</button>
     </header>
 
     <main>
