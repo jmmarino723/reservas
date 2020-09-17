@@ -18,19 +18,36 @@ function cancelarBtn(){
 
 function agregarEstudiante(){
 
-  let estudianate = entradasUsuario[0];
-  let exame = entradasUsuario[1];
-  let calificacion = entradasUsuario[2];
+  let estudianate = entradasUsuario[0].value;
+  let exame = entradasUsuario[1].value;
+  let calificacion = entradasUsuario[2].value;
 
-  if(estudianate.value.trim()===''){
+  if(estudianate.trim()===''){
     alert('El estudiante no puede ser vacio')
   } 
-  else if(calificacion.value.trim() ==='' && parseInt(calificacion.value.trim() >= 0)){
+  else if(calificacion.trim() ==='' && parseInt(calificacion.value.trim() >= 0)){
     alert("dfdsf");
   }
 
   activarModal();
+  renderNuevoEstudiante(estudianate,exame,calificacion);
 }
+
+const renderNuevoEstudiante = (title, imageUrl, rating) => {
+  const nuevoEstudiante = document.createElement('li');
+  nuevoEstudiante.className = 'movie-element';
+  nuevoEstudiante.innerHTML = `
+    <div class="movie-element__image">
+      <img src="${imageUrl}" alt="${title}">
+    </div>
+    <div class="movie-element__info">
+      <h2>${title}</h2>
+      <p>${rating}/5 stars</p>
+    </div>
+  `;
+  const listRoot = document.getElementById('movie-list');
+  listRoot.append(nuevoEstudiante);
+};
 
 
 transparencia.addEventListener('click', activarModal);
