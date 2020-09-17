@@ -34,7 +34,9 @@ function agregarEstudiante(){
 }
 
 const renderNuevoEstudiante = (title, imageUrl, rating) => {
+  const idElement = '' + Math.random();
   const nuevoEstudiante = document.createElement('li');
+  nuevoEstudiante.id = idElement;
   nuevoEstudiante.className = 'movie-element';
   nuevoEstudiante.innerHTML = `
     <div class="student-element__image">
@@ -45,9 +47,26 @@ const renderNuevoEstudiante = (title, imageUrl, rating) => {
       <p>Calificación ${rating}/5</p>
     </div>
   `;
+  nuevoEstudiante.addEventListener('click', function(){
+    eliminarEstudiante(idElement);
+  })
   const listRoot = document.getElementById('student-list');
   listRoot.append(nuevoEstudiante);
 };
+
+function eliminarEstudiante(id){
+  const modalConf = document.getElementById('delete-modal');
+  modalConf.classList.add('visible');
+  modalConf.querySelector('.btn--danger').addEventListener('click',function(){
+    const elemento = document.getElementById(id);
+    elemento.remove();
+    modalConf.classList.remove('visible');
+  });
+  modalConf.querySelector('.btn--passive').addEventListener('click',function(){
+    modalConf.classList.remove('visible');
+  }); 
+}
+
 
 
 transparencia.addEventListener('click', activarModal);
